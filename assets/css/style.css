@@ -1,10 +1,9 @@
 :root {
     --primary-color: #6d2f18;
     --secondary-color: #E0996F;
-    --tertiary-color: #c9a084;
-    --primary-font: Arial, Helvetica, sans-serif;
-    --headings: "Courier New", Courier, monospace;
-    --body-text: Verdana, sans-serif;
+    --tertiary-color: #292d36;
+    --mono: "Courier New", Courier, monospace;
+    --sans-serif: Verdana, sans-serif;
 }
 
 * {
@@ -12,22 +11,31 @@
     padding: 0;
 }
 
-body {
-    color: var(--primary-color)
+a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-header {
-    font-family: var(--headings);
+body {
+    color: var(--primary-color);
+    font-family: var(--sans-serif);
+}
+
+header { 
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: var(--tertiary-color);
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-family: var(--mono);
+    background-color: white;
     padding: 20px 40px;
+    width: full-width;
 }
 
 header h1 {
-    padding: 10px 50px;
     background-color: var(--primary-color);
+    align-items: flex-start;
+    padding: 10px 20px;
 }
 
 header a {
@@ -46,9 +54,10 @@ header nav ul {
 }
 
 header nav ul li a {
-    padding: 10px 15px;
-    border-bottom: 3px solid var(--primary-color);
+    padding: 10px 25px;
     padding-bottom: 2px;
+    color: var(--primary-color);
+    font-size: 18px;
 }
 
 .cover-image {
@@ -56,8 +65,54 @@ header nav ul li a {
     background-size: cover;
     background-position: center;
     height: 400px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .subtitle {
-    
+    align-self: flex-end;
+    padding: 15px 40px;
+    background-color: var(--tertiary-color);
+    text-align: center;
+    color: white;
+    font-family: var(--mono);
+}
+
+.subtitle h2, h3 {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.about-me, .work, .contact{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+}
+
+.about-me h2, .work h2, .contact h2 {
+    padding-right: 50px;
+    display: inline-flex;
+    align-content: left;
+    width: 150px;
+    border-right: solid 3px var(--secondary-color);
+    line-height: 100px;
+    text-align: center;
+    font-family: var(--mono);
+}
+
+.about-me p, .work p, .contact p {
+    padding-left: 50px;
+    height: 100px;
+    line-height: 18px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+table {
+    border-spacing: 30px;
+}
+
+table tr th{
+    border-bottom: 3px solid var(--secondary-color);
+    font-weight: lighter;
 }
