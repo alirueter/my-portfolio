@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #6d2f18;
+    --secondary-color: #E0996F;
+    --tertiary-color: #c9a084;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --headings: "Courier New", Courier, monospace;
+    --body-text: Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--primary-color)
+}
+
+header {
+    font-family: var(--headings);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--tertiary-color);
+    padding: 20px 40px;
+}
+
+header h1 {
+    padding: 10px 50px;
+    background-color: var(--primary-color);
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-top: 25px;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 2px;
+}
+
+.cover-image {
+    background-image: url("../images/ali.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.subtitle {
+    
+}
