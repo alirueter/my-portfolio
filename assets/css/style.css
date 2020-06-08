@@ -21,21 +21,6 @@ body {
     font-family: var(--sans-serif);
 }
 
-#nav-table {
-    border-collapse: separate;
-    border-spacing: 50px 25px;
-}
-
-#contact-table {
-    border-collapse: separate;
-    border-spacing: 50px 38px;
-}
-
-table tr th {
-    border-bottom: 2px solid var(--secondary-color);
-    font-weight: lighter;
-}
-
 header { 
     display: flex;
     justify-content: space-between;
@@ -49,7 +34,7 @@ header {
 header h1 a {
     text-decoration: none;
     color: var(--primary-color);
-    padding: 10px 20px;
+    font-size: 4vw;
 }
 
 header nav {
@@ -67,7 +52,7 @@ header nav ul li a {
     padding: 10px 25px;
     padding-bottom: 2px;
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 2vw;
 }
 
 .cover-image {
@@ -89,7 +74,7 @@ header nav ul li a {
 }
 
 .subtitle h2 {
-    font-size: medium;
+    font-size: 2vw;
     font-weight: lighter;
 }
 
@@ -104,18 +89,19 @@ header nav ul li a {
 .about-me h2, .work h2, .contact h2 {
     padding-right: 50px;
     display: inline-flex;
-    
     width: 150px;
     text-align: center;
     font-family: var(--mono);
     font-size: 2vw;
 }
 
-.about-me p, .contact p {
-    padding-left: 50px;
+.about-me p, .contact a{
     font-size: 1.25vw;
 }
 
+.about-me p {
+    padding-left: 50px;
+}
 .work-grid-wrapper {
     display: flex;
     width: 100%;
@@ -159,4 +145,14 @@ header nav ul li a {
 .box4 {
     grid-column: 4 / 6;
     grid-row: 1 / 6;
+}
+
+#contact-table {
+    border-collapse: separate;
+    border-spacing: 50px 38px;
+}
+
+table tr th {
+    border-bottom: 2px solid var(--secondary-color);
+    font-weight: lighter;
 }
