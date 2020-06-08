@@ -21,6 +21,10 @@ body {
     font-family: var(--sans-serif);
 }
 
+.underline {
+    border-bottom: 3px var(--secondary-color) solid;
+}
+
 header { 
     display: flex;
     justify-content: space-between;
@@ -40,6 +44,7 @@ header h1 a {
 header nav {
     margin: 7px 0;
 }
+
 header nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +54,7 @@ header nav ul {
 } 
 
 header nav ul li a {
-    padding: 10px 25px;
+    padding: 10px 15px;
     padding-bottom: 2px;
     color: var(--primary-color);
     font-size: 2vw;
@@ -93,6 +98,7 @@ header nav ul li a {
     text-align: center;
     font-family: var(--mono);
     font-size: 2vw;
+    color: var(--secondary-color);
 }
 
 .about-me p, .contact a{
@@ -102,6 +108,12 @@ header nav ul li a {
 .about-me p {
     padding-left: 50px;
 }
+
+.vl-about-me {
+    border-left: 6px solid var(--tertiary-color);
+    height: 100px;  
+}
+
 .work-grid-wrapper {
     display: flex;
     width: 100%;
@@ -112,8 +124,8 @@ header nav ul li a {
 .work-grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 15px;
     color: var(--primary-color);
     
@@ -128,6 +140,11 @@ header nav ul li a {
     text-align: left;
     flex-direction: row-reverse;
     background-color: var(--secondary-color);
+}
+
+.vl-work {
+    border-left: 6px solid var(--tertiary-color);
+    height: 300px; 
 }
 
 .textbox {
@@ -155,6 +172,7 @@ header nav ul li a {
     grid-row: 1 / 6;
     background-image: url("../images/runbuddy.png");
     background-size: cover; 
+    background-position: center;
 }
 
 .box2 {
@@ -175,12 +193,67 @@ header nav ul li a {
     background-color: lightgrey;
 }
 
-#contact-table {
-    border-collapse: separate;
-    border-spacing: 50px 38px;
+.phone {
+    padding-left: 50px;
 }
 
-table tr th {
-    border-bottom: 2px solid var(--secondary-color);
-    font-weight: lighter;
+.phone, .email {
+    padding-right: 25px;
+}
+
+.vl-contact {
+    border-left: 6px solid var(--tertiary-color);
+    height: 50px; 
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header h1 a {
+        font-size: 6vw;
+    }
+    
+    header nav ul li a {
+        font-size: 2vw;
+    }
+
+    .subtitle h2 {
+        font-size: 4vw;
+    }
+
+    .about-me, .work, .contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .break {
+        width: 100%;
+    }
+    .about-me h2, .work h2, .contact h2 {
+        font-size: 5vw;
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid var(--tertiary-color);
+        justify-content: center;
+        align-content: center;
+        padding-right: 0;
+    }  
+
+    .about-me p,  .contact-info a {
+        font-size: 3vw;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .vl-about-me, .vl-work, .vl-contact {
+        border-left: none;
+    }
+
+    .work-grid-wrapper {
+        padding-left: 0;
+    }
 }
