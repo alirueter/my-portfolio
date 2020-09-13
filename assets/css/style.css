@@ -190,7 +190,9 @@ header nav ul li a {
 .box3 {
     grid-column: 3 / 5;
     grid-row: 3 / 6;
-    background-color: lightgrey;
+    background-image: url("../images/campgrounds.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .box4 {
